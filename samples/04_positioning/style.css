@@ -1,0 +1,108 @@
+
+/*  In this version, the footer is stuck to the bottom */
+
+
+/*  Use border box sizing
+*/
+* {
+	box-sizing: border-box
+}
+
+html {
+
+	font-family: "open sans", "calibri", "helvetica", sans-serif;
+}
+
+#container {
+	width: 600px;
+
+	/*  margin:auto; centers a fixed size div by adding
+		equal margins to the left and right.
+	*/
+	margin:auto;
+	margin-top: 100px;
+}
+
+
+h1, h2 {
+	text-align: left;
+	font-weight: 100;
+}
+
+h1 {
+	font-size: 72px;
+}
+
+h2 {
+	font-style: italic;
+
+	margin-top: -55px;
+	margin-left: 30px;
+}
+
+.description {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.description .album-title {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.songs {
+	margin-bottom: 100px;
+
+}
+
+.song-title {
+	display: inline-block;
+	width: 230px
+}
+
+.footer{
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	padding: 6px;
+
+	/*  Add a background color, because we don't
+		want the text to interfere with the
+		text in the background.
+	*/
+
+	background-color:  #5997C8;
+
+	/*  Fixed position is like the elements are stuck
+		to the computer screen. In this case, we want to
+		stick the footer to the bottom of the screen.
+		Therefore, we need to set the offsets to 0
+		from the left and right, and 0 from the bottom.
+		We don't set a value for the top, because we 
+		want to fit as many screen sizes as possible.
+	*/
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+a {
+	color: #5997C8;
+
+	text-decoration: none;
+	border-bottom: 1px solid  #5997C8;
+}
+a:visited {
+	color: #45BA9F;
+	border-bottom: 1px solid  #45BA9F;
+}
+a:hover {
+	color: #8CDD5D;
+	border-bottom: 1px solid  #8CDD5D;
+}
+a:active {
+	color: #229470;
+	border-bottom: 1px solid  #229470;
+}

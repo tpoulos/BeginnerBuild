@@ -1,0 +1,126 @@
+/*  Use border box sizing
+*/
+* {
+	box-sizing: border-box
+}
+
+/*  This set of rules will apply to the HTML
+	element, which contains all of the items
+	on the page, so it's a good place to put
+	settings that effect most everything on
+	the page.
+*/
+
+html {
+	/*  Now that we've loaded open sans, we can use
+		it in the font stack. It's still a good idea
+		to have backups, just in case open sans fails
+		to load for some reason.
+	*/
+
+	font-family: "open sans", "calibri", "helvetica", sans-serif;
+}
+
+#container {
+	width: 600px;
+
+	/*  margin:auto; centers a fixed size div by adding
+		equal margins to the left and right.
+	*/
+	margin:auto;
+	margin-top: 100px;
+}
+
+
+/*	In this case, we are setting the weight of both
+	h1 and h2 tags. This keeps us from duplicating code
+*/
+
+h1, h2 {
+	text-align: left;
+	font-weight: 100;
+}
+
+/*	Now we apply style rules sepparately */
+
+h1 {
+	font-size: 72px;
+}
+
+h2 {
+	font-style: italic;
+
+	/*  Margins can be negative too! When they're
+		negative, they pull the element closer 
+		rather than push it away
+	*/
+	margin-top: -55px;
+	margin-left: 30px;
+}
+
+.description {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/*  In this selector we haven't put a comma, so
+	it applies to all elements with class 'album-title'
+	inside of the element with the class 'description
+*/
+.description .album-title {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.songs {
+	margin-bottom: 50px;
+
+}
+
+.song-title {
+	display: inline-block;
+	width: 230px
+}
+
+.footer{
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+/* This selector styles all links */
+a {
+	color: #5997C8;
+
+	text-decoration: none;
+	border-bottom: 1px solid  #5997C8;
+}
+
+/*  This selector styles all links that
+	the user has already visited
+*/
+a:visited {
+	color: #45BA9F;
+	border-bottom: 1px solid  #45BA9F;
+}
+
+/*  This selector styles all links that
+	the user is hovering over
+*/
+a:hover {
+	color: #8CDD5D;
+	border-bottom: 1px solid  #8CDD5D;
+}
+
+/*  This selector styles all links that
+	the user is currently clicking
+*/
+a:active {
+	color: #229470;
+	border-bottom: 1px solid  #229470;
+}
+
+/*  Question: What would happen if I switched
+	the selector for hover and the selector
+	for active?
+*/

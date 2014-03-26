@@ -1,0 +1,111 @@
+
+/*  Our stylesheet is arranged from most 
+	general to most specific. Although this
+	is not required, it's generally considered
+	a good practice.
+*/
+
+
+/*  This tag uses what's called the 
+	star selector (*). You can think of 
+	it as a wildcard. It matches every
+	type of element.
+
+	The rule it applies changes something very 
+	fundamental about the way CSS treats borders, 
+	margins and padding. Without this property, 
+	the margins and padding are added onto any 
+	set with, so if you set someting to be 300px 
+	wide and add a padding of 30px, it will end up 
+	being 360px wide. With the property added, the
+	margins still go around the outside, but the paddings
+	and borders are subtracted from the set content
+	dimensions, so that same box will be 300px wide.
+*/
+
+* {
+	box-sizing: border-box
+}
+
+/*  This set of rules will apply to the HTML
+	element, which contains all of the items
+	on the page, so it's a good place to put
+	settings that effect most everything on
+	the page.
+*/
+
+html {
+	/* This rule sets the font of the page to arial.
+		if arial is not avaliable, helvetica is used
+		instead. If that is not avaliable, the browser
+		will use the default sans-serif font. This is
+		called a font stack.
+	*/
+
+	font-family: "calibri", "helvetica", sans-serif;
+}
+
+/* 	I've created a container to hold all of the content
+	of the page. I used an ID because there will only
+	ever be one container, so the ID will be unique.
+*/
+
+#container {
+	/* 	This rule makes the container 600 pixels wide
+		This means that all of the content within it
+		will be sized to fit within those 600 pixels.
+	*/
+	width: 600px;
+
+	/*  margin:auto; is a very counterintuitive rule.
+		Margins wrap around the edges of the box, and
+		normally they are sized in pixels. However, in
+		this case, I'm telling the margin to be as big
+		as it needs to be to center this box. Resize
+		your web browser and see how the box stays in
+		the center.
+	*/
+	margin:auto;
+
+	/*  We also add some margin to the top so that the 
+		title doesn't seem as cramped.
+	*/
+	margin-top: 100px;
+}
+
+h1 {
+	text-align: center;
+	color: tomato;
+}
+
+h2 {
+	text-align: center;
+	font-style: italic;
+	font-weight: normal;
+	color: tomato;
+}
+
+.description {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.album-title {
+	font-weight: bold;
+}
+
+.songs {
+	margin-bottom: 50px;
+
+}
+
+.song-title {
+	display: inline-block;
+	width: 230px
+}
+
+.footer{
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
